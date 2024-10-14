@@ -27,6 +27,14 @@ const App = () => {
         return setFriends( friends.map( f => f === "Alex" ? "Alex Bhai" :f));
       }
 
+  const [movie , setMovie] = useState({
+    name : "Animal",
+    rating : 10
+  })
+
+  const ratingUpdate = () => {
+    setMovie({...movie , rating:9})
+  }
 
   return (
     <>
@@ -39,6 +47,13 @@ const App = () => {
     <button onClick={addNew}>Add a friend</button>
     <button onClick={removeOne}>Remove a friend</button>
     <button onClick={updateOne}>Update a friend</button>
+
+    <p>Dealing with Object :</p>
+    <p>{movie.name}</p>
+    <p>{movie.rating}</p>
+
+    <button onClick={ratingUpdate}>Change the rating</button>
+
     </>
   )
 }
