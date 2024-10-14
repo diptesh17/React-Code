@@ -1,11 +1,21 @@
-import {data} from "../App"
+import {data,data1} from "../App"
 
 const ComponentA = () => {
   return (
     <data.Consumer>
         {
             (name) => {
-               return  <h1>{name}</h1>
+               return  (
+                <data1.Consumer>
+                    {
+                        (surname) => {
+                            return (
+                                <h1>Name : {name} & Surname : {surname}</h1>
+                            )
+                        }
+                    }
+                </data1.Consumer>
+               )
             }
         }
     </data.Consumer>
