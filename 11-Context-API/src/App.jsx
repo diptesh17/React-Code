@@ -1,5 +1,5 @@
 import { createContext } from "react"
-import ComponentA from "./Component/COmponentA";
+import ComponentB from "./Component/ComponentB";
 
 export const data = createContext();
 export const data1 = createContext();
@@ -14,9 +14,9 @@ const App = () => {
   return (
 
     <data.Provider value={name}>
-      <data1.Consumer value={surname}>
-      <ComponentA/>
-      </data1.Consumer>
+      <data1.Provider value={surname}>
+      <ComponentB/>
+      </data1.Provider>
     </data.Provider>
     
   )
