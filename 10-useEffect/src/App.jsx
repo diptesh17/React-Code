@@ -1,4 +1,6 @@
 import { useState , useEffect } from "react";
+import CounterEffect from "./Components/CounterEffect";
+import FetchDataEffect from "./Components/FetchDataEffect";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -21,6 +23,11 @@ const App = () => {
           <li key={Math.random()}>{item.title}</li>
         ))}
       </ul>
+
+      <h1>Counter Effect : </h1>
+      <CounterEffect/>
+      <h1>Fetch Data Effect : </h1>
+      <FetchDataEffect/>
     </>
   );
 };
