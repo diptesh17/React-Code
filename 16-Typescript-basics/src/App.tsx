@@ -1,11 +1,25 @@
-import User from "./Components/User"
+import AdminInfo from "./Components/AdminInfo";
+import UserInfo from "./Components/UserInfo";
+import { Info, AdminInfoList } from "./types";
 
 const App = () => {
-  return (
-    <div>
-      <User name="Diptesh" age={20}/>
-    </div>
-  )
-}
+  const user: Info = {
+    id: 1,
+    name: "Dip"
+  };
 
-export default App
+  const admin: AdminInfoList = {
+    id: 2,
+    name: "Sumit",
+    role: "admin"
+  };
+
+  return (
+    <>
+      <UserInfo user={user} />
+      <AdminInfo admin={admin} />
+    </>
+  );
+};
+
+export default App;
