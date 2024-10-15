@@ -1,5 +1,8 @@
-
-const User = ( {name,age} : {name : string , age : number}) => {
+type UserShape = {
+    name : string ,
+    age : number
+}
+const User = ( {name,age} : UserShape ) => {
   return (
     <div>
         <h2>{name}</h2>

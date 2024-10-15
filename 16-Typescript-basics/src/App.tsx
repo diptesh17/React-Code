@@ -3,7 +3,7 @@ import User from "./Components/User"
 const App = () => {
   return (
     <div>
-      <User name="Dip" age={20}/>
+      <User name="Diptesh" age={20}/>
     </div>
   )
 }
